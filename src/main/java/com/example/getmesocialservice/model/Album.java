@@ -48,14 +48,6 @@ public class Album {
         this.name = name;
     }
 
-    public String getcreatedBy() {
-        return createdBy;
-    }
-
-    public void setcreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
     public String getCoverPhotoUrl() {
         return coverPhotoUrl;
     }

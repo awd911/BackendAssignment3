@@ -21,4 +21,31 @@ public class AlbumRepository {
         albumList.add(album);
         return album;
     }
+
+    public List<Album> getAllAlbums() {
+        return albumList;
+    }
+
+    public Album getAlbumById(int id) {
+        for(Album album: albumList){
+            if(album.getid() == id){
+                return album;
+            }
+        }
+        return null;
+    }
+
+    public Album deleteAlbum(int albumId) {
+        Album deletedAlbum = null;
+
+        for(Album u:albumList){
+            if(u.getid() == albumId){
+                deletedAlbum = u;
+                albumList.remove(u);
+                return deletedAlbum;
+            }
+
+        }
+        return deletedAlbum;
+    }
 }
